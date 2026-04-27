@@ -6,7 +6,7 @@ import uuid
 import tempfile
 
 app = Flask(__name__)
-CORS(app) # Allow all origins for the development frontend
+CORS(app) 
 
 @app.route('/api/upload', methods=['POST'])
 def upload_receipt():
@@ -18,22 +18,22 @@ def upload_receipt():
         return jsonify({'error': 'No selected file'}), 400
         
     if file:
-        # Save file to a temporary directory
+       
         temp_dir = tempfile.gettempdir()
         filename = f"{uuid.uuid4()}_{file.filename}"
         filepath = os.path.join(temp_dir, filename)
         file.save(filepath)
         
         try:
-            # Process the image
+           
             result = process_receipt_image(filepath)
             
-            # Clean up the temp file
+           
             os.remove(filepath)
             
             return jsonify(result), 200
         except Exception as e:
-            # Attempt cleanup if it fails
+          
             if os.path.exists(filepath):
                 os.remove(filepath)
             return jsonify({'error': str(e)}), 500
