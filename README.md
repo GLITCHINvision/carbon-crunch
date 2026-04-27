@@ -1,10 +1,10 @@
-# 🧾 Carbon Crunch
+#  Carbon Crunch
 
 **Carbon Crunch** is a premium, AI-powered receipt scanning and expense analytics tool. It leverages deep learning OCR to extract structured financial data from receipt images, providing a seamless and interactive experience with a modern **Frosted Glass (Glassmorphism)** design.
 
 ![Carbon Crunch Dashboard](screenshot.png)
 
-## ✨ Features
+##  Features
 
 - **🤖 AI-Powered OCR**: Uses EasyOCR (ResNet + LSTM) for robust text detection and recognition.
 - **❄️ Frosted Glass UI**: A beautiful, light-mode glassmorphism interface built with React and Tailwind CSS.
@@ -13,7 +13,7 @@
 - **✨ Smooth Interactions**: Powered by Framer Motion for a fluid, premium user experience.
 - **🚀 Advanced Preprocessing**: Uses OpenCV for denoising, thresholding, and deskewing to ensure high accuracy even with noisy images.
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Python / Flask**: Robust API layer.
@@ -27,7 +27,7 @@
 - **Framer Motion**: State-of-the-art animations.
 - **Lucide React**: Clean, consistent iconography.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.8+
@@ -63,15 +63,15 @@
 
 The application will be available at `http://localhost:5173`.
 
-## 🧠 How It Works
+##  How It Works
 
 1. **Image Preprocessing**: Raw receipt photos are cleaned using adaptive thresholding and noise reduction (OpenCV) to normalize lighting and remove shadows.
 2. **Text Detection**: The EasyOCR engine identifies text regions using a CRAFT detection model.
 3. **Data Extraction**: A custom heuristic engine processes the raw text to identify financial entities like prices, vendors, and line items.
 4. **Validation**: The system calculates a confidence score based on character reliability and pattern matching, flagging any items that may require human verification.
 
-## 📄 License
+##  License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-Built with ❤️ by [GLITCHINvision](https://github.com/GLITCHINvision)
+Built with  by [GLITCHINvision](https://github.com/GLITCHINvision)
